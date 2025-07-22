@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat;
+}
+
+.material-symbols-outlined {
+  color: black;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: #5085A8;*/
+    height: 11vh;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.116);
+    z-index: 10;
+    position: relative;
+    background-image: url(../assets/pexels-pixabay-358636.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#redesheader{
+    display: flex;
+    justify-content: space-evenly;
+    width: 13vw;
+    margin-right: 15px;
+}
+
+#redesheader > img{
+    height: 20px;
+}
+
+#headerlogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#headerlogo > img{
+    height: 20px;
+}
+
+#headercontainer{
+    display: flex;
+    width: 600px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 15px;
+    font-weight: 300;
+
+}
+
+section#hero{
+    background-image: url(../assets/pexels-pixabay-358636.jpg);
+    height: 658px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    background-attachment: fixed;
+    
+}
+
+#conteudo{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 550px;
+    margin-top: 50px;
+    margin-left: 100px;
+    font-weight: 400;
+    justify-content: space-evenly;
+    padding-left: 25px;
+}
+
+#conteudo > h1{
+    font-size: 3em;
+}
+
+#herobotoes > button{
+    height: 45px;
+    width: 200px;
+    background-color: transparent;
+    font-family: Montserrat;
+    border: 1px solid black;
+    
+}
+
+#herobotoes > #opcao02{
+    border: none;
+    text-decoration: underline;
+}
+
+#herobotoes > #opcao01:hover{
+    text-decoration: underline;
+}
+
+#herobotoes > #opcao02:hover{
+    text-decoration: none;
+}
+
+#sessaodestaque{
+    height: 658px;
+    background-color: white;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+#sessaodestaque > img{
+    /*fazer animação da imagem aparecendo*/
+   height: 500px;
+   position: absolute; 
+   top: 12%;
+   left: 60%;
+}
+
+#sessaocasas{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 700px;
+    align-items: center;
+}
+
+#sessaocasas > h2{
+    margin: 50px;
+}
+
+
+#imagenscasas > img {
+    height: 400px;
+    margin: 15px;
+}
