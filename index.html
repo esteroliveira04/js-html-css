@@ -12,10 +12,10 @@
         <div id="headercontainer">
             <div id="headerlogo">
                 <img src="assets/botao-de-inicio.png" alt="">
-                <p>Horizon Empreendimentos</p>
+                <p>Horizon Construtora</p>
             </div>
-            <span class="material-symbols-outlined">menu</span>
-            <p>0 (00) 00000-0000</p>
+            <!--<span class="material-symbols-outlined">menu</span>
+            <p>0 (00) 00000-0000</p>-->
         </div>
         <div id="redesheader">
             <img src="assets/facebook.png" alt="">
@@ -25,30 +25,77 @@
     </header>
     <section id="hero">
         <div id="conteudo">
-            <h1>Seu melhor investimento começa <b>aqui</b>.</h1>
-            <p>Empreendimentos de sucesso por todo o Mundo.</p>
+            <h1>A beleza da simplicidade urbana</h1>
+            <p>Arquitetura atemporal, linhas suaves e detalhes que acolhem. Nossos empreendimentos traduzem a beleza do viver bem — com tranquilidade, sofisticação e identidade.</p>
             <div id="herobotoes">
-                <button id="opcao01">Opção 01</button>
-                <button id="opcao02">Opção 02</button>
+                <button class="botaopadrao">Ver projetos</button>
+                <button id="opcao02">Agendar visita</button>
             </div>
         </div>
     </section>
+
     <section id="sessaodestaque">
-        <div id="conteudo">
-            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+        <div class="fade-esquerda" id="conteudo">
+            <h2>Residencial La Belle Vie</h2>
             <!--setinha apontando para o texto-->
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci accusantium, tempora eius voluptatum placeat ipsum eum repellendus dicta quae quod similique.<br> <br>Aperiam asperiores magni iste sapiente reiciendis. Quod, voluptatum?</br></p> <br>
-            <p>projected by @fulanodetown</p>
+            <p>Inspirado na elegância da arquitetura europeia, o Residencial Vista Azul une linhas clássicas a um design contemporâneo.<br> <br>Localizado em uma área urbana estratégica, o empreendimento oferece praticidade sem abrir mão da sofisticação. Perfeito para quem valoriza beleza, conforto e uma atmosfera serena em meio ao ritmo moderno da vida urbana.</br></p> <br>
+            <p>Arquiteto @fulanodetown</p>
         </div>
-        <img src="assets/pexels-alexfalconer-8500494.jpg" alt="">
+            <img class="fade-direita" src="assets/pexels-alexfalconer-8500494.jpg" alt="">
     </section>
+    
     <section id="sessaocasas">
-        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2 class="aparecer-cima">Lorem ipsum dolor sit amet.</h2>
         <div id="imagenscasas">
-            <img src="assets/pexels-kei-scampa-1201427-4848508.jpg" alt="">
-            <img src="assets/pexels-hilal-albayindir-150089507-18397061.jpg" alt="">
-            <img src="assets/pexels-jovydas-2462015.jpg" alt="">
+            <img  class="fade-esquerda card" src="assets/pexels-harry-cooke-6195012.jpg" alt="">
+            <img class="card" src="assets/pexels-hilal-albayindir-150089507-18397061.jpg" alt="">
+            <img class="fade-direita card" src="assets/pexels-jovydas-2462015.jpg" alt="">
+        </div>
+        <!--Linha de slide-->
+        <div id="abaixoslide">
+            <p>Simulando barra de slide</p>
+            <button class="botaopadrao">Lorem</button>
         </div>
     </section>
+
+<script>
+  const elementos = document.querySelectorAll('.fade-esquerda, .fade-direita');
+
+  function animarScroll() {
+    elementos.forEach(el => {
+      const topo = el.getBoundingClientRect().top;
+      const altura = window.innerHeight;
+
+      if (topo < altura - 100 && topo > 0) {
+        el.classList.add('ativo');
+      } else {
+        el.classList.remove('ativo');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animarScroll);
+  window.addEventListener('load', animarScroll); // já anima o que estiver visível ao carregar
+
+const elementosCima = document.querySelectorAll('.aparecer-cima');
+
+function animarScrollCima() {
+  elementosCima.forEach(el => {
+    const topo = el.getBoundingClientRect().top;
+    const alturaTela = window.innerHeight;
+
+    if (topo < alturaTela - 100) {
+      el.classList.add('ativo');
+    } else {
+      el.classList.remove('ativo');
+    }
+  });
+}
+
+// Já chama junto com a função principal, ou crie um listener separado
+window.addEventListener('scroll', animarScrollCima);
+window.addEventListener('load', animarScrollCima);
+
+</script>
 </body>
 </html>

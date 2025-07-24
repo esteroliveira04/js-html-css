@@ -60,11 +60,10 @@ header{
 #headercontainer{
     display: flex;
     width: 600px;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
-    margin-left: 15px;
+    margin-left: 40px;
     font-weight: 300;
-
 }
 
 section#hero{
@@ -94,7 +93,7 @@ section#hero{
     font-size: 3em;
 }
 
-#herobotoes > button{
+button{
     height: 45px;
     width: 200px;
     background-color: transparent;
@@ -108,7 +107,7 @@ section#hero{
     text-decoration: underline;
 }
 
-#herobotoes > #opcao01:hover{
+#herobotoes > .botaopadrao:hover{
     text-decoration: underline;
 }
 
@@ -130,6 +129,24 @@ section#hero{
    position: absolute; 
    top: 12%;
    left: 60%;
+   z-index: 10;
+}
+
+.fade-esquerda {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+}
+
+.fade-direita {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease-out;
+}
+
+.ativo {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 #sessaocasas{
@@ -138,14 +155,46 @@ section#hero{
     background-color: white;
     height: 700px;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 #sessaocasas > h2{
-    margin: 50px;
+    margin: 40px;
 }
-
 
 #imagenscasas > img {
     height: 400px;
     margin: 15px;
+}
+
+#abaixoslide{
+    display: flex;
+    margin: 40px;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aparecer-cima {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 1s ease-out;
+}
+
+.aparecer-cima.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover .card-background{
+    transform: scale(1.15) translateZ(0);
+    background-size: 300px;
+}
+
+.card-grid > .card:not(:hover){
+    transform: scale(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card-background, .card-grid:hover > .card:not(:hover) .card-category{
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
