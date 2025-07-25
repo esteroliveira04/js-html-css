@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -44,13 +46,15 @@ header{
 }
 
 #redesheader > img{
-    height: 20px;
+    height: 19px;
 }
 
 #headerlogo{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 45px;
+    justify-content: space-between;
 }
 
 #headerlogo > img{
@@ -107,7 +111,7 @@ button{
     text-decoration: underline;
 }
 
-#herobotoes > .botaopadrao:hover{
+.botaopadrao:hover{
     text-decoration: underline;
 }
 
