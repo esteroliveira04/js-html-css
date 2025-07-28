@@ -57,6 +57,7 @@
 
 <script>
   const elementos = document.querySelectorAll('.fade-esquerda, .fade-direita');
+  const elementosCima = document.querySelectorAll('.aparecer-cima');
 
   function animarScroll() {
     elementos.forEach(el => {
@@ -71,12 +72,7 @@
     });
   }
 
-  window.addEventListener('scroll', animarScroll);
-  window.addEventListener('load', animarScroll);
-
-const elementosCima = document.querySelectorAll('.aparecer-cima');
-
-function animarScrollCima() {
+  function animarScrollCima() {
   elementosCima.forEach(el => {
     const topo = el.getBoundingClientRect().top;
     const alturaTela = window.innerHeight;
@@ -89,9 +85,10 @@ function animarScrollCima() {
   });
 }
 
-window.addEventListener('scroll', animarScrollCima);
-window.addEventListener('load', animarScrollCima);
-
+  window.addEventListener('scroll', animarScroll);
+  window.addEventListener('load', animarScroll);
+  window.addEventListener('scroll', animarScrollCima);
+  window.addEventListener('load', animarScrollCima);
 </script>
 </body>
 </html> 
