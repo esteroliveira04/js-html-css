@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
+/*Resolução de tela 1920x1080*/
+
 *{
   margin: 0;
   padding: 0;
@@ -36,6 +38,7 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    background-attachment: fixed;
 }
 
 #redesheader{
@@ -78,7 +81,7 @@ section#hero{
     background-position: top;
     display: flex;
     background-attachment: fixed;
-    
+    transition: 0.5s;
 }
 
 #conteudo{
@@ -91,10 +94,12 @@ section#hero{
     font-weight: 400;
     justify-content: space-evenly;
     padding-left: 25px;
+    transition: 0.5s;
 }
 
 #conteudo > h1{
     font-size: 3em;
+    transition: 0.5s;
 }
 
 button{
@@ -103,7 +108,7 @@ button{
     background-color: transparent;
     font-family: Montserrat;
     border: 1px solid black;
-    
+    transition: 0.5s;
 }
 
 #herobotoes > #opcao02{
@@ -125,15 +130,16 @@ button{
     display: flex;
     position: relative;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 #sessaodestaque > img{
-    /*fazer animação da imagem aparecendo*/
    height: 500px;
    position: absolute; 
    top: 12%;
    left: 60%;
    z-index: 10;
+   transition: 0.5s;
 }
 
 .fade-esquerda {
@@ -171,7 +177,7 @@ button{
     margin: 15px;
 }
 
-#abaixoslide{
+#partebaixo{
     display: flex;
     margin: 40px;
     width: 600px;
