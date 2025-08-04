@@ -229,6 +229,7 @@ button{
     justify-content: space-evenly;
     align-items: center;
     margin-top: -1px;
+    margin-bottom: 50px;
 }
 
 #sessaodestaque > img{
@@ -246,8 +247,7 @@ button{
 #sessaocasas{
     display: flex;
     flex-direction: column;
-    background-color: pink;
-    height: 900px;
+    height: 1050px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -280,7 +280,158 @@ button{
 }
 
 @media (max-width: 700px) {
-  h1{
-    color: green;
-  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: #5085A8;*/
+    height: 11vh;
+    z-index: 10;
+    position: relative;
+    background-image: url(../assets/pexels-pixabay-358636.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+#headerlogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+#headerlogo > img{
+    height: 19px;
+    transition: 0.5s;
+}
+
+#redesheader{
+    display: flex;
+    justify-content: space-evenly;
+    width: 35vw;
+    margin-right: 15px;
+    transition: 0.5s;
+}
+
+#redesheader > img{
+    height: 18px;
+}
+
+section#hero{
+    background-image: url(../assets/pexels-pixabay-358636.jpg);
+    height: 658px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    background-attachment: fixed;
+    transition: 0.5s;
+    justify-content: center;
+}
+
+#conteudo{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 380px;
+    margin-top: 50px;
+    margin-left: 20px;
+    font-weight: 400;
+    justify-content: space-evenly;
+    padding-left: 25px;
+    transition: 0.5s;
+}
+
+#conteudodestaque{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 450px;
+    margin-left: 70px;
+    font-weight: 400;
+    justify-content: space-evenly;
+    padding-left: 25px;
+    transition: 0.5s;
+}
+
+#conteudo > h1{
+    font-size: 2.4em;
+    transition: 0.5s;
+}
+
+button{
+    height: 40px;
+    width: 150px;
+    background-color: transparent;
+    font-family: Montserrat;
+    border: 1px solid black;
+    transition: 0.5s;
+    
+}
+
+#sessaodestaque{
+    height: 758px;
+    display: flex;
+    flex-direction: column !important;
+    transition: 0.5s;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -1px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+#sessaodestaque > img{
+   height: 450px;
+   transition: 0.5s;
+   width: 250px;
+}
+
+#sessaodestaque > #conteudodestaque{
+    width: 350px;
+    transition: 0.5s;
+    margin-bottom: 50px;
+    margin-left: -10px;
+    margin-top: 100px;
+}
+
+#sessaocasas{
+    display: flex;
+    flex-direction: column;
+    height: 1450px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#sessaocasas > h2{
+    margin: 40px;
+}
+
+#imagenscasas{
+    width: 85vw;
+    transition: 0.5s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagenscasas > img {
+    height: 360px;
+    margin: 15px;
+}
+
+#partebaixo{
+    display: flex;
+    margin: 40px;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center; 
+}
+
 }

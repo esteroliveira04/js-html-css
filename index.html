@@ -47,7 +47,7 @@
         <h2 class="aparecer-cima">Lorem ipsum dolor sit amet.</h2>
         <div id="imagenscasas">
             <img  class="fade-esquerda card" src="assets/1.jpg" alt="">
-            <img class="card" src="assets/2.jpg" alt="">
+            <img id="elementomq" class="fade-direita card card-inicial" src="assets/2.jpg" alt="">
             <img class="fade-direita card" src="assets/3.jpg" alt="">
         </div>
         <div class="aparecer-cima" id="partebaixo">
@@ -84,6 +84,15 @@
       el.classList.remove('ativo');
     }
   });
+}
+
+function aplicarClasseResponsive() {
+  const elemento = document.getElementById('elementomq');
+  if (window.innerWidth <= 900) {
+    elemento.classList.add('fade-direita', 'card');
+  } else {
+    elemento.classList.remove('fade-direita', 'card');
+  }
 }
 
   window.addEventListener('scroll', animarScroll);
